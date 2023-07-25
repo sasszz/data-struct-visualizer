@@ -28,7 +28,7 @@ const NodeQueueGenerator: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center h-screen">
       <div className="mb-4">
         <input
           type="number"
@@ -43,6 +43,14 @@ const NodeQueueGenerator: React.FC = () => {
         >
           Add Number
         </button>
+        {numbers.length > 0 && (
+          <button
+            onClick={handleRemoveNumber}
+            className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg"
+          >
+            Remove
+          </button>
+        )}
       </div>
       <div className="flex gap-4">
         {numbers
@@ -57,16 +65,6 @@ const NodeQueueGenerator: React.FC = () => {
             />
           ))}
       </div>
-      {numbers.length > 0 && (
-        <div className="mt-4">
-          <button
-            onClick={handleRemoveNumber}
-            className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg"
-          >
-            Remove
-          </button>
-        </div>
-      )}
     </div>
   );
 };

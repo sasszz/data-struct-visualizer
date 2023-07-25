@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold mb-4">Data Structure Generator</h1>
+      <h1 className="text-3xl font-bold my-6">Data Structure Generator</h1>
       <div className="mb-4">
         <label className="mr-2">Select Data Structure:</label>
         <select
